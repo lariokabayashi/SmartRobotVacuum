@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=UserInterface
+comment0.text=\r\n\ Simple\ helper;\ real\ app\ would\ be\ JavaFX/Android\ widget\ etc.\r\n
+comment1.params=msg
+comment1.target=void\ showMessage(java.lang.String)
+numComments=2

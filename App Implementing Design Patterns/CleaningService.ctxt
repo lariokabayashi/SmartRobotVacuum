@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=CleaningService
+comment1.params=
+comment1.target=float\ getProgress()
+comment1.text=\n\ Retrieves\ the\ current\ cleaning\ progress.\n\ @return\ Progress\ percentage\ (0.0\u2013100.0)\n
+comment2.params=
+comment2.target=MapData\ getUpdatedMap()
+comment2.text=\n\ Retrieves\ the\ most\ recent\ map\ data.\n\ @return\ Serialized\ MapData\ object\n
+numComments=3

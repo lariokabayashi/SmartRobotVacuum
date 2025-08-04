@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=SpotCleaningAction
+comment0.text=\r\n\ A\ quick\ spot-clean\ strategy\ for\ small\ messes.\r\n
+comment1.params=session
+comment1.target=void\ execute(CleaningSession)
+numComments=2

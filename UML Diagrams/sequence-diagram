@@ -1,0 +1,71 @@
+@startuml
+title Sequence Diagram – UC Cluster UC-11 to UC-16 (Version 1)
+
+skinparam defaultTextAlignment left
+skinparam FontSize 18  ' general fallback
+skinparam FontSize 18
+skinparam ParticipantFontSize 18
+skinparam SequenceMessageFontSize 18
+skinparam TitleFontSize 24
+skinparam GroupFontSize 18
+skinparam ActorFontSize 18
+skinparam NoteFontSize 18
+
+actor User
+
+participant NotificationManager
+participant CleaningController
+participant MapHandler
+participant CleaningStatusView
+participant PreferenceView
+participant PreferenceManager
+participant RoomPreferenceStorage
+participant Logger
+participant LogViewer
+participant SessionLog
+participant BoundaryEditor
+participant BoundaryValidator
+participant BoundaryStorage
+
+group UC-11: Display and Control Mess
+    User -> NotificationManager : displayMessAlert()
+    User -> CleaningController : selectCleaningAction()
+    CleaningController -> MapHandler : updateMap(actionType)
+end
+
+group UC-12: Adaptive Cleaning
+    loop for each mess
+        CleaningController -> CleaningStatusView : updateCleaningStatus()
+        CleaningController -> MapHandler : updateMap(strategyType)
+        CleaningController -> NotificationManager : notifyStrategyChange()
+    end
+end
+
+group UC-13: Configure Cleaning Preferences
+    User -> PreferenceView : editPreference(roomId)
+    PreferenceView -> PreferenceManager : sendPreferenceUpdate(prefData)
+    PreferenceManager -> RoomPreferenceStorage : savePreference(prefData)
+    PreferenceManager -> PreferenceView : updatePreferenceView()
+end
+
+group UC-14: Review Logs
+    User -> LogViewer : openLogView()
+    LogViewer -> SessionLog : fetchLogs()
+    SessionLog --> LogViewer : logs[]
+    LogViewer -> Logger : logUserAccess()
+end
+
+group UC-15: Configure Boundary (No-Go Zones)
+    User -> BoundaryEditor : defineNoGoZone(zoneData)
+    BoundaryEditor -> BoundaryValidator : validateZone(zoneData)
+    BoundaryValidator -> BoundaryStorage : storeZoneIfValid()
+    BoundaryEditor -> MapHandler : renderOverlay(zoneData)
+end
+
+group UC-16: Display Cleaning Progress
+    loop every 500ms
+        CleaningController -> CleaningStatusView : updateProgress(percentage)
+        CleaningController -> NotificationManager : notifyIfCompleted()
+    end
+end
+@enduml

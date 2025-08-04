@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=AppController
+comment0.text=\r\n\ Coordinates\ sensor\ activation,\ AI\ analysis,\ output\ to\ Firmware,\ and\ user\ notification.\r\n
+comment1.params=
+comment1.target=void\ startCleaningSession()
+numComments=2

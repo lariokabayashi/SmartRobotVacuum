@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=CleaningStatusView
+comment0.text=\r\n\ VIEW\ \u2013\ live\ progress\ bar\ /\ label.\r\n\ Observes\ {@link\ CleaningSession}.\r\n
+comment1.params=arg
+comment1.target=void\ update(java.lang.Object)
+comment2.params=progress
+comment2.target=void\ showProgress(float)
+comment2.text=Paint\ or\ print\ the\ current\ progress\ value.
+numComments=3

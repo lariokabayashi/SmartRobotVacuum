@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=MovementWord
+comment0.text=\r\n\ Represents\ a\ movement\ direction\ for\ the\ robot.\r\n\r\n\ @Brian\r\n\ @29/5\r\n
+comment1.params=direction
+comment1.target=MovementWord(MovementWord.Direction)
+comment1.text=\r\n\ Constructs\ a\ MovementWord\ with\ the\ specified\ direction.\r\n\r\n\ @param\ direction\ the\ direction\ of\ movement\r\n
+comment2.params=
+comment2.target=MovementWord.Direction\ getDirection()
+comment2.text=\r\n\ Returns\ the\ direction\ associated\ with\ this\ movement.\r\n\r\n\ @return\ the\ movement\ direction\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\r\n\ Returns\ the\ string\ representation\ of\ the\ movement\ direction.\r\n\r\n\ @return\ the\ name\ of\ the\ direction\ in\ uppercase\r\n
+numComments=4

@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=RobotStatusInterface
+comment1.params=
+comment1.target=int\ getCleaningProgress()
+comment2.params=
+comment2.target=int\ getBatteryLevel()
+comment3.params=
+comment3.target=boolean\ startCleaning()
+comment4.params=
+comment4.target=boolean\ stopCleaning()
+comment5.params=
+comment5.target=RobotStatus\ getStatus()
+comment6.params=callback
+comment6.target=void\ registerCallback(NotificationInterface)
+comment7.params=callback
+comment7.target=void\ unregisterCallback(NotificationInterface)
+numComments=8

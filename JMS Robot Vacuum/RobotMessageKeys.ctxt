@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=RobotMessageKeys
+comment0.text=\n\ Defines\ all\ message\ types\ used\ in\ communication\ between\ \n\ the\ Robot\ Firmware\ (server)\ and\ Mobile\ App\ (client)\ via\ JMS.\n\ \n\ Each\ enum\ value\ represents\ a\ specific\ message\ type\ with\:\n\ -\ A\ consistent\ naming\ convention\n\ -\ Clear\ purpose\ documentation\n
+comment1.params=messageName
+comment1.target=RobotMessageKeys(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

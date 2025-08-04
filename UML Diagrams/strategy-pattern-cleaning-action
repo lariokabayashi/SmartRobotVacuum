@@ -1,0 +1,30 @@
+@startuml
+title Strategy Pattern for Cleaning Action
+
+/'──────────────────────────────
+  STRATEGY CONTRACT
+──────────────────────────────'/
+interface CleaningAction <<strategy>> {
+  +execute(session : CleaningSession) : void
+}
+
+/'──────────────────────────────
+  CONCRETE STRATEGIES
+──────────────────────────────'/
+class StandardCleaningAction <<strategy>> {
+  +execute(session : CleaningSession) : void
+}
+StandardCleaningAction ..|> CleaningAction
+
+class SpotCleaningAction <<strategy>> {
+  +execute(session : CleaningSession) : void
+}
+SpotCleaningAction ..|> CleaningAction
+
+
+/'──────────────────────────────
+  CONTEXT & COLLABORATION
+──────────────────────────────'/
+CleaningSession "1" o-- "1" CleaningAction : «current»
+CleaningController "1" --> "1" CleaningAction : «selects»
+@enduml

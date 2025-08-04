@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=RoomPreferenceStorage
+comment1.params=o
+comment1.target=void\ registerObserver(Observer)
+comment2.params=o
+comment2.target=void\ removeObserver(Observer)
+comment3.params=
+comment3.target=void\ notifyObservers()
+numComments=4

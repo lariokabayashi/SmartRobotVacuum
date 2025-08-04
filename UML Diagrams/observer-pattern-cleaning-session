@@ -1,0 +1,31 @@
+@startuml
+title Observer – Cleaning Progress
+
+interface Subject {
+  +registerObserver(o : Observer)
+  +removeObserver(o : Observer)
+  +notifyObservers()
+}
+
+interface Observer {
+  +update(arg)
+}
+
+/'── Concrete Subject ──'/
+class CleaningSession <<model>> {
+  -progress : float
+  +getProgress() : float
+  +setProgress(p : float) : void   'calls notifyObservers()
+}
+CleaningSession ..|> Subject
+
+/'── Concrete Observer ──'/
+class CleaningStatusView <<view>> {
+  +update(p : float) : void
+  +display() : void
+}
+CleaningStatusView ..|> Observer
+
+Observer ..> Subject : registerObserver()      
+Subject  --> Observer : notifyObservers()
+@enduml

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=MapInteractionHandler
+comment0.text=\n\ Write\ a\ description\ of\ class\ MapInteractionHandler\ here.\n\n\ @author\ Larisssa\n\ @version\ 31/05\n
+comment1.params=controller
+comment1.target=MapInteractionHandler(NoGoZoneController)
+comment2.params=x1\ y1\ x2\ y2\ label
+comment2.target=void\ handleZoneDraw(int,\ int,\ int,\ int,\ java.lang.String)
+numComments=3

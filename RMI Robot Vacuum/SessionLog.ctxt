@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=SessionLog
+comment1.params=
+comment1.target=SessionLog()
+comment2.params=
+comment2.target=SessionLog\ getInstance()
+comment3.params=e
+comment3.target=void\ addEntry(SessionEntry)
+comment4.params=
+comment4.target=java.util.List\ getEntries()
+comment5.params=o
+comment5.target=void\ registerObserver(Observer)
+comment6.params=o
+comment6.target=void\ removeObserver(Observer)
+comment7.params=
+comment7.target=void\ notifyObservers()
+numComments=8

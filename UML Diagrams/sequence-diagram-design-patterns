@@ -1,0 +1,75 @@
+@startuml
+title Sequence Diagram – Design Patterns Implemented
+skinparam defaultTextAlignment left
+skinparam FontSize 18
+skinparam ParticipantFontSize 18
+skinparam SequenceMessageFontSize 18
+skinparam TitleFontSize 24
+skinparam GroupFontSize 18
+skinparam ActorFontSize 18
+skinparam NoteFontSize 18
+
+actor User
+
+participant NotificationManager
+participant CleaningController
+participant MapHandler
+participant CleaningStatusView
+participant PreferenceView
+participant PreferenceManager
+participant RoomPreferenceStorage
+participant Logger
+participant LogViewer
+participant SessionLog
+participant BoundaryEditor
+participant BoundaryValidator
+participant BoundaryStorage
+participant CleaningSession
+
+group UC-11: Display and Control Mess
+    CleaningSession -> NotificationManager : notifyObservers()
+    User -> NotificationManager : displayMessAlert()
+    User -> CleaningController : selectCleaningAction(type)
+    CleaningController -> CleaningSession : selectAction(type)
+    CleaningController -> MapHandler : highlightArea(area)
+end
+
+group UC-12: Adaptive Cleaning
+    loop for each mess
+        CleaningController -> CleaningSession : selectAction(strategy)
+        CleaningSession -> NotificationManager : notifyObservers()
+        CleaningSession -> CleaningStatusView : notifyObservers()
+        CleaningSession -> MapHandler : notifyObservers()
+    end
+end
+
+group UC-13: Configure Cleaning Preferences
+    User -> PreferenceView : sendUserInput(room, preference)
+    PreferenceView -> PreferenceManager : savePreference(room, preference)
+    PreferenceManager -> RoomPreferenceStorage : setPreference(room, preference)
+    RoomPreferenceStorage -> PreferenceView : notifyObservers()
+end
+
+group UC-14: Review Logs
+    User -> LogViewer : openLogView()
+    LogViewer -> SessionLog : getEntries()
+    SessionLog -> LogViewer : notifyObservers()
+    LogViewer -> Logger : logUserAccess()
+end
+
+group UC-15: Configure Boundary (No-Go Zones)
+    User -> BoundaryEditor : defineZone(points)
+    BoundaryEditor -> BoundaryValidator : isValid(zone)
+    BoundaryValidator -> BoundaryStorage : storeZoneIfValid()
+    BoundaryStorage -> MapHandler : notifyObservers()
+    BoundaryEditor -> MapHandler : renderOverlay(zone)
+end
+
+group UC-16: Display Cleaning Progress
+    loop every 500ms
+        CleaningController -> CleaningSession : updateProgress(percent)
+        CleaningSession -> CleaningStatusView : notifyObservers()
+        CleaningSession -> NotificationManager : notifyIfCompleted()
+    end
+end
+@enduml

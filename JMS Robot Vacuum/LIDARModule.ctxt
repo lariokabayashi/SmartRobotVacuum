@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=LIDARModule
+comment0.text=\n\ Represents\ a\ specific\ SLAMModule\ that\ uses\ LIDAR\ sensors\ to\ detect\ \n\ obstacles.\ It\ processes\ LIDAR\ distance\ data\ and\ updates\ the\ \n\ PathChecker\ accordingly.\n\n\ @author\ Brian\n\ @version\ 30/5\n
+comment1.params=position
+comment1.target=LIDARModule(int)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ LIDARModule.\n\ \n\ @param\ position\ the\ position\ of\ this\ sensor\ in\ the\ array\ in\ PathChecker.\n
+comment2.params=distance
+comment2.target=void\ detectObstacle(int)
+comment2.text=\n\ Simulates\ receiving\ new\ distance\ data\ from\ the\ LIDAR\ sensor\n\ and\ updates\ the\ PathChecker\ with\ this\ information.\n\ \n\ @param\ distance\ The\ newly\ detected\ distance\ to\ the\ nearest\ obstacle.\n
+numComments=3

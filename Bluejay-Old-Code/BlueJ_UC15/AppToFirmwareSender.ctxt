@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=AppToFirmwareSender
+comment0.text=\n\ Represents\ the\ App's\ sender\ to\ firmware\ that\ sends\ no-go\ zone\ updates\ from\ the\ app.\n
+comment1.params=updatedMap
+comment1.target=void\ sendUpdatedMap(int[][])
+numComments=2

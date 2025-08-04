@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=RobotCaller
+comment1.params=statusTopic\ alertTopic
+comment1.target=RobotCaller(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=void\ initializeProducers()
+comment3.params=status
+comment3.target=void\ notifyStatusChange(serobjs.RobotStatus)
+comment4.params=batteryLevel
+comment4.target=void\ notifyLowBattery(int)
+comment5.params=
+comment5.target=void\ notifyCleaningComplete()
+comment6.params=
+comment6.target=void\ returnToDock()
+comment7.params=errorMessage
+comment7.target=void\ notifyError(java.lang.String)
+comment8.params=
+comment8.target=boolean\ close()
+numComments=9

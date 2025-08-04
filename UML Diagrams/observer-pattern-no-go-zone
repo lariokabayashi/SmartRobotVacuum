@@ -1,0 +1,33 @@
+@startuml
+title Observer – Boundary Zones
+
+interface Subject {
+  +registerObserver(o : Observer)
+  +removeObserver(o : Observer)
+  +notifyObservers()
+}
+
+interface Observer {
+  +update(arg)
+}
+
+/'── Concrete Subject ──'/
+class BoundaryStorage <<model>> {
+  -noGoZones : List<Polygon>
+  +addZone(z:Polygon) : void          'mutator
+  +removeZone(z:Polygon) : void
+  +getZones() : List<Polygon>
+}
+BoundaryStorage ..|> Subject
+
+/'── Concrete Observer ──'/
+class MapHandler <<model>> {
+  +update(zones : List<Polygon>) : void
+  +highlightArea(a:Polygon) : void
+  +renderOverlay(z:Polygon) : void
+}
+MapHandler ..|> Observer
+
+Observer ..> Subject : registerObserver()
+Subject  --> Observer : notifyObservers()
+@enduml

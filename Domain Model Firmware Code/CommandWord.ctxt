@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CommandWord
+comment0.text=\r\n\ Represents\ a\ command\ instruction\ for\ the\ robot\ to\ execute.\r\n\r\n\ @Brian\r\n\ @29/5\r\n
+comment1.params=type
+comment1.target=CommandWord(CommandWord.CommandType)
+comment1.text=\r\n\ Constructs\ a\ CommandWord\ with\ the\ specified\ command\ type.\r\n
+comment2.params=
+comment2.target=CommandWord.CommandType\ getType()
+comment2.text=\r\n\ Returns\ the\ type\ of\ the\ command\r\n
+numComments=3

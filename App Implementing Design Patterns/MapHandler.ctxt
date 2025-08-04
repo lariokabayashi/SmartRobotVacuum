@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=MapHandler
+comment1.params=zones
+comment1.target=void\ update(java.util.List)
+comment1.text=Concrete\ Subject\ \u2192\ strongly-typed\ update
+comment2.params=arg
+comment2.target=void\ update(java.lang.Object)
+comment2.text=Generic\ Observer\ entry-point
+comment3.params=area
+comment3.target=void\ highlightArea(java.awt.Polygon)
+comment4.params=zone
+comment4.target=void\ renderOverlay(java.awt.Polygon)
+numComments=5

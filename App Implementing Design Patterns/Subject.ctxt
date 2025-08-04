@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Subject
+comment0.text=\r\n\ SUBJECT\ (Observer\ pattern)\r\n\ ---------------------------------\r\n\ A\ model\ element\ that\ can\ be\ observed.\ \ Concrete\ Subjects\r\n\ (e.g.,\ CleaningSession,\ RoomPreferenceStorage,\ SessionLog\ \u2026)\r\n\ call\ {@link\ \#notifyObservers()}\ whenever\ their\ state\ changes.\r\n
+comment1.params=o
+comment1.target=void\ registerObserver(Observer)
+comment2.params=o
+comment2.target=void\ removeObserver(Observer)
+comment3.params=
+comment3.target=void\ notifyObservers()
+numComments=4

@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=AppInput
+comment0.text=\r\n\ Contains\ the\ data\ which\ the\ firmware\ gives\ to\ the\ app\r\n\r\n\ @Brian\r\n\ @29/5\r\n
+comment1.params=
+comment1.target=AppInput()
+comment2.params=
+comment2.target=AppInput\ getInstance()
+comment2.text=\r\n\ Returns\ the\ singleton\ instance\ of\ AppInput.\r\n\ Uses\ double-checked\ locking\ for\ thread-safe\ lazy\ initialization.\r\n\r\n\ @return\ the\ single\ AppInput\ instance\r\n
+comment3.params=outputMap
+comment3.target=void\ setOutputMap(Map)
+comment3.text=\r\n\ Saves\ a\ new\ output\ map\ to\ store\r\n\ \r\n\ @param\ outputMap\ a\ map\ that\ is\ more\ suited\ for\ user\ use.\r\n
+comment4.params=
+comment4.target=void\ noBattery()
+comment4.text=\ \r\n\ Notifies\ user\ that\ robot\ is\ out\ of\ battery\r\n
+comment5.params=output\ percent
+comment5.target=void\ updateMap(Map,\ float)
+comment5.text=\r\n\ Updates\ app\ on\ map\ and\ cleaned\ percentage\r\n
+comment6.params=
+comment6.target=void\ update()
+comment6.text=\r\n\ Notifies\ when\ map\ is\ done\ and\ prints\ out\ the\ map\r\n\ 0\ \=\ Cleaned\ Tile\r\n\ 1\ \=\ Obstacle\r\n\ 2\ \=\ Starting\ Tile\r\n\ 4\ \=\ Unvisited\ Tile\r\n
+numComments=7

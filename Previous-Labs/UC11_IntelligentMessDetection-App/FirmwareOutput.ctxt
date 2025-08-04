@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=FirmwareOutput
+comment0.text=\r\n\ Data\ sent\ from\ the\ robot\ firmware\ to\ the\ app.\r\n\ Encapsulates\ the\ result\ of\ intelligent\ mess\ detection.\r\n
+comment1.params=messType\ priority\ confidence\ location\ requiresUser
+comment1.target=FirmwareOutput(java.lang.String,\ int,\ float,\ java.lang.String,\ boolean)
+comment2.params=
+comment2.target=void\ display()
+comment3.params=
+comment3.target=boolean\ isUserInputRequired()
+comment4.params=
+comment4.target=java.lang.String\ getFormattedLocation()
+comment5.params=
+comment5.target=boolean\ isHighPriority()
+comment6.params=
+comment6.target=boolean\ isValid()
+numComments=7

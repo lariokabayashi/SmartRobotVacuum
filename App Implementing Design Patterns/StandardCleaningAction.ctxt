@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=StandardCleaningAction
+comment0.text=\r\n\ A\ full-room\ default\ cleaning\ strategy.\r\n
+comment1.params=session
+comment1.target=void\ execute(CleaningSession)
+numComments=2

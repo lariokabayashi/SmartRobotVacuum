@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=MappedNavigationStrategy
+comment0.text=\r\n\ Strategy\ using\ a\ stored\ map\ with\ support\ for\ virtual\ boundaries\ and\ dynamic\ redirection.\r\n
+comment1.params=inputMap
+comment1.target=MappedNavigationStrategy(Map)
+comment1.text=\r\n\ Constructor\ for\ this\ strategy\r\n\ \r\n\ @param\ inputMap\ the\ map\ for\ the\ strategy\ to\ utilise.\r\n
+comment2.params=data\ vb\ lastMove
+comment2.target=MovementWord\ calculateNextMove(SurroundingData,\ VirtualBoundary,\ MovementWord)
+comment2.text=\r\n\ Determines\ the\ next\ best\ movement\ for\ the\ robot\ using\ the\ map\ and\ bfs.\r\n\ \r\n\ @param\ data\ the\ data\ of\ surrounding\ obstacles\r\n\ @param\ vb\ rectangle\ set\ by\ user\ for\ the\ robot\ to\ avoid.\r\n\ @param\ lastMove\ the\ previous\ move\ done\ by\ the\ robot.\r\n
+comment3.params=startX\ startY\ data
+comment3.target=java.util.List\ bfsToNearestDirty(int,\ int,\ SurroundingData)
+comment3.text=\r\n\ The\ implementation\ of\ the\ bts\ to\ find\ the\ next\ best\ move.\ It\ priorities\ finding\r\n\ values\ of\ 4\ in\ the\ grid\ and\ avoiding\ places\ the\ robot\ should\ not\ access\ like\ 1\ and\ 3.\r\n\ It\ additionaly\ checks\ with\ SurroundingData\ to\ block\ off\ directions\ which\ are\ open\r\n\ on\ the\ map\ but\ aren't\ in\ the\ current\ scenario.\r\n\ \r\n\ @param\ startX\ the\ starting\ x\ coordinate\r\n\ @param\ startY\ the\ starting\ y\ coordinate\r\n\ @param\ data\ the\ compiled\ sensor\ data\ which\ shows\ how\ close\ obstacles\ are.\r\n\ \r\n\ @return\ a\ list\ of\ next\ optimal\ moves.\r\n
+comment4.params=startX\ startY\ targetX\ targetY
+comment4.target=java.util.List\ bfsToTarget(int,\ int,\ int,\ int)
+comment4.text=\r\n\ BFS\ search\ from\ the\ current\ position\ to\ a\ specified\ target\ position.\r\n\ \r\n\ @param\ startX\ starting\ x\ coordinate\r\n\ @param\ startY\ starting\ y\ coordinate\r\n\ @param\ targetX\ the\ x\ coordinate\ to\ reach\r\n\ @param\ targetY\ the\ y\ coordinate\ to\ reach\r\n\ \r\n\ @param\ the\ list\ of\ the\ next\ optimal\ moves\r\n
+numComments=5

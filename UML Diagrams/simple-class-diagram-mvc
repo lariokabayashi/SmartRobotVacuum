@@ -1,0 +1,134 @@
+@startuml
+title Simple MVC Class Diagram
+'──────────────────────────────────────────────────────────
+'  Simple MVC Pattern for Cleaning System
+'──────────────────────────────────────────────────────────
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+'──────────────────────────────────────────────────────────
+'  MODEL (Entity - Data)
+'──────────────────────────────────────────────────────────
+class CleaningSession <<model>> {
+  -currentAction : CleaningAction
+  -progress : float
+  +getProgress() : float
+}
+
+class RoomPreferenceStorage <<model>> {
+  -preferences : Map<String, CleaningPreference>
+  +getPreference(roomId : String) : CleaningPreference
+  +setPreference(roomId : String, pref : CleaningPreference) : void
+}
+
+class SessionLog <<model>> {
+  -entries : List<SessionEntry>
+  +addEntry(e : SessionEntry) : void
+  +getEntries() : List<SessionEntry>
+}
+
+class BoundaryStorage <<model>> {
+  -noGoZones : List<Polygon>
+  +addZone(zone : Polygon) : void
+  +getZones() : List<Polygon>
+}
+
+class MapHandler <<model>> {
+  -floorMap : MapData
+  +highlightArea(area : Polygon) : void
+  +renderOverlay(zone : Polygon) : void
+}
+
+'──────────────────────────────────────────────────────────
+'  VIEW (Boundary - UI)
+'──────────────────────────────────────────────────────────
+class PreferenceView <<view>> {
+  +display(prefs : Map<String,CleaningPreference>) : void
+  +sendUserInput(room : String, p : CleaningPreference) : void
+}
+
+class CleaningStatusView <<view>> {
+  +update(percent : float) : void
+  +display() : void
+}
+
+class NotificationManager <<view>> {
+  +display() : void
+  +showAlert(type : AlertType) : void
+}
+
+class BoundaryEditor <<view>> {
+  +defineZone(points : List<Point>) : void
+  +sendZone(zone : Polygon) : void
+  +display() : void
+}
+
+class LogViewer <<view>> {
+  +show(entries : List<SessionEntry>) : void
+}
+
+class UserInterface <<view>> {
+  +showMessage(msg : String) : void
+}
+
+'──────────────────────────────────────────────────────────
+'  CONTROLLER (Control - Logic)
+'──────────────────────────────────────────────────────────
+class CleaningController <<controller>> {
+  -session : CleaningSession
+  +selectAction(action : CleaningAction) : void
+  +updateProgress(percent : float) : void
+  +forwardPreference(room : String, p : CleaningPreference) : void
+  +notifyCompletion() : void
+  +sendLog(msg : String) : void
+}
+
+class PreferenceManager <<controller>> {
+  -storage : RoomPreferenceStorage
+  +savePreference(room : String, p : CleaningPreference) : void
+  +loadPreference(room : String) : CleaningPreference
+}
+
+class BoundaryValidator <<controller>> {
+  -storage : BoundaryStorage
+  +isValid(zone : Polygon) : boolean
+}
+
+class Logger <<controller>> {
+  -log : SessionLog
+  +log(event : String) : void
+}
+
+'──────────────────────────────────────────────────────────
+'  Compositions & aggregations (part-of relationships)
+'──────────────────────────────────────────────────────────
+SessionLog            "1" *-- "0..*" SessionEntry         : «contains»
+BoundaryStorage       "1" *-- "0..*" Polygon              : «contains»
+RoomPreferenceStorage "1" o-- "0..*" CleaningPreference   : «aggregates»
+
+'──────────────────────────────────────────────────────────
+'  MVC Relationships
+'──────────────────────────────────────────────────────────
+CleaningController  "1"  --> "*"    MapHandler           : «conveys»         
+CleaningController  "1"  --> "0..*" NotificationManager : «uses»
+CleaningController  "1"  --> "0..*" CleaningStatusView  : «updates»
+CleaningController  "1"  --> "1"    PreferenceManager   : «requests»
+CleaningController  "1"  --> "1"    Logger              : «delegates»
+CleaningController  "1"  --> "0..1" CleaningSession     : «manages»           
+
+PreferenceManager   "1"  --> "1"    RoomPreferenceStorage : «persists»
+PreferenceView      "0..*" --> "1"  PreferenceManager     : «sends»
+
+BoundaryEditor      "*"  --> "1"    MapHandler           : «renders»           
+BoundaryEditor      "1"  --> "*"    BoundaryValidator    : «submits»          
+BoundaryValidator   "1"  --> "1"    BoundaryStorage      : «stores»
+MapHandler          "*"  --> "1"    BoundaryStorage      : «reads»            
+
+Logger              "1"  --> "1"    SessionLog           : «writes»
+LogViewer           "0..*" --> "1"  SessionLog           : «reads»
+
+CleaningStatusView  "0..*" <-- "1"  CleaningController   : «receives»
+NotificationManager "0..*" --> "1"  UserInterface        : «displays»
+
+@enduml

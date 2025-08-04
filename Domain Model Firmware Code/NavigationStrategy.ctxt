@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=NavigationStrategy
+comment0.text=\r\n\ Interface\ for\ the\ navigation.\r\n\r\n\ @Brian\r\n\ @30/5\r\n
+comment1.params=data\ vb\ lastMove
+comment1.target=MovementWord\ calculateNextMove(SurroundingData,\ VirtualBoundary,\ MovementWord)
+comment1.text=\r\n\ Calculates\ next\ movement\ for\ the\ robot\r\n\r\n\ @param\ \ sd,\ vb,\ lastMove\r\n\ @return\ \ \ MovementWord\r\n
+numComments=2

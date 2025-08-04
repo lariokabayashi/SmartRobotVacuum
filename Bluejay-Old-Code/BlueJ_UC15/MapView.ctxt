@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=MapView
+comment0.text=\n\ View\ that\ displays\ the\ current\ map\ and\ zones\ and\ sends\ updates\ to\ firmware.\n
+comment1.params=appSender\ initialMap
+comment1.target=MapView(AppToFirmwareSender,\ int[][])
+comment2.params=
+comment2.target=int[][]\ getCurrentMap()
+comment3.params=zones
+comment3.target=void\ modelUpdated(java.util.List)
+numComments=4

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=BlindNavigationStrategy
+comment0.text=\n\ Navigation\ logic\ when\ no\ map\ is\ available.\n\n\ @Brian\n\ @30/5\n
+comment1.params=data\ vb\ lastMove
+comment1.target=MovementWord\ calculateNextMove(SurroundingData,\ VirtualBoundary,\ MovementWord)
+comment1.text=\n\ Determines\ the\ next\ best\ move\ in\ absence\ of\ a\ map.\n\ \n\ @param\ data\ the\ data\ of\ surrounding\ obstacles\n\ @param\ vb\ rectangle\ set\ by\ the\ user\ for\ the\ robot\ to\ avoid.\n\ @param\ lastMove\ the\ last\ move\ performed\ by\ the\ robot.\n\ @return\ the\ calculated\ movement\ command.\n
+comment2.params=map\ x\ y
+comment2.target=boolean\ isWithinBounds(Map,\ int,\ int)
+comment2.text=\n\ Helper\ function\ for\ checking\ if\ a\ given\ coordinate\ is\ within\ bounds.\n\ \n\ @param\ map\ the\ currently\ built\ map\n\ @\n
+numComments=3

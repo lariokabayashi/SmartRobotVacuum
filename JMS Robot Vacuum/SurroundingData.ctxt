@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=SurroundingData
+comment0.text=\n\ Represents\ distance\ information\ for\ obstacles\ surrounding\ the\ robot\n\ in\ four\ directons\n\n\ @Brian\n\ @30/5\n
+comment1.params=up\ down\ left\ right
+comment1.target=SurroundingData(int,\ int,\ int,\ int)
+comment1.text=\n\ Constructor\ for\ class.\n\ @param\ up\ the\ distance\ above\ the\ robot\ to\ an\ obstacle.\n\ @param\ down\ the\ distance\ below\ the\ robot\ to\ an\ obstacle.\n\ @param\ left\ the\ distance\ to\ the\ left\ of\ the\ robot\ to\ an\ obstacle.\n\ @param\ right\ the\ distance\ ot\ the\ right\ of\ the\ robot\ to\ an\ obstacle.\n
+comment2.params=
+comment2.target=int\ getUpDistance()
+comment2.text=\n\ Getter\ for\ the\ up\ value.\n
+comment3.params=
+comment3.target=int\ getDownDistance()
+comment3.text=\n\ Getter\ for\ the\ down\ value.\n
+comment4.params=
+comment4.target=int\ getLeftDistance()
+comment4.text=\n\ Getter\ for\ the\ left\ value.\n
+comment5.params=
+comment5.target=int\ getRightDistance()
+comment5.text=\n\ Getter\ for\ the\ right\ value.\n
+comment6.params=dir
+comment6.target=boolean\ isOpen(MovementWord.Direction)
+comment6.text=\n\ Checks\ if\ there\ is\ a\ gap\ between\ the\ robot\ and\ an\ obstacle\n\ in\ a\ given\ direction.\n
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=\n\ Print\ the\ data\ as\ a\ string.\n
+numComments=8

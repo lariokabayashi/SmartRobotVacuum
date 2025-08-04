@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=CleaningController
+comment1.params=s\ pm\ lg
+comment1.target=CleaningController(CleaningSession,\ PreferenceManager,\ Logger)
+comment2.params=a
+comment2.target=void\ selectAction(CleaningAction)
+comment3.params=
+comment3.target=void\ startCleaning()
+comment4.params=room\ p
+comment4.target=void\ forwardPreference(java.lang.String,\ CleaningPreference)
+comment5.params=
+comment5.target=void\ notifyCompletion()
+comment6.params=msg
+comment6.target=void\ sendLog(java.lang.String)
+numComments=7

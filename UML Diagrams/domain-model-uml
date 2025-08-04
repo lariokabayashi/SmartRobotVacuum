@@ -1,0 +1,42 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+'====== Boundary Classes ======
+class PreferenceView <<boundary>>
+class CleaningStatusView <<boundary>>
+class NotificationManager <<boundary>>
+class BoundaryEditor <<boundary>>
+class LogViewer <<boundary>>
+
+'====== Control Classes ======
+class CleaningController <<control>>
+class PreferenceManager <<control>>
+class BoundaryValidator <<control>>
+class Logger <<control>>
+
+'====== Entity Classes ======
+class RoomPreferenceStorage <<entity>>
+class SessionLog <<entity>>
+class BoundaryStorage <<entity>>
+class MapHandler <<entity>>
+
+'====== Associations ======
+CleaningController --> MapHandler : conveys updates
+CleaningController --> NotificationManager : uses
+CleaningController --> CleaningStatusView : updates
+CleaningController --> PreferenceManager : requests save
+CleaningController --> Logger : delegates logging
+
+PreferenceManager --> RoomPreferenceStorage : provides data
+PreferenceView --> PreferenceManager : sends input
+
+BoundaryEditor --> MapHandler : renders overlay
+BoundaryEditor --> BoundaryValidator : submits zone
+BoundaryValidator --> BoundaryStorage : stores if valid
+MapHandler --> BoundaryStorage : provides zones
+
+Logger --> SessionLog : logs interaction
+LogViewer --> SessionLog : displays log
+CleaningStatusView --> CleaningController : receives update
+NotificationManager --> UserInterface : displays notification
+@enduml

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=PreferenceView
+comment1.params=arg
+comment1.target=void\ update(java.lang.Object)
+comment2.params=prefs
+comment2.target=void\ display(java.util.Map)
+comment3.params=room\ p
+comment3.target=void\ update(java.lang.String,\ CleaningPreference)
+comment4.params=room\ p
+comment4.target=void\ sendUserInput(java.lang.String,\ CleaningPreference)
+numComments=5

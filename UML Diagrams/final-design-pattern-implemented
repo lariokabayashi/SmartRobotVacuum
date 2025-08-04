@@ -1,0 +1,203 @@
+@startuml
+title App MVC with Observer, Strategy and Singleton Pattern
+
+skinparam linetype ortho
+skinparam classAttributeIconSize 0
+hide empty members
+
+/'──────────────────────────────────────────────────────────
+  OBSERVER CONTRACTS (unchanged)
+──────────────────────────────────────────────────────────'/
+interface Subject {
+  +registerObserver(o : Observer)
+  +removeObserver(o : Observer)
+  +notifyObservers()
+}
+
+interface Observer {
+  +update(arg)
+}
+
+/'──────────────────────────────────────────────────────────
+  MODEL (Entity – Data)
+──────────────────────────────────────────────────────────'/
+class CleaningSession <<model>> {
+  -currentAction : CleaningAction
+  -progress : float
+  +getProgress() : float
+  +setProgress(p : float) : void
+}
+CleaningSession ..|> Subject
+
+class RoomPreferenceStorage <<model>> {
+  -preferences : Map<String, CleaningPreference>
+  +getPreference(roomId : String) : CleaningPreference
+  +setPreference(roomId : String, pref : CleaningPreference) : void
+}
+RoomPreferenceStorage ..|> Subject
+
+class SessionLog <<model, singleton>> {
+  -entries : List<SessionEntry>
+  +addEntry(e : SessionEntry) : void
+  +getEntries() : List<SessionEntry>
+  --
+  {static} getInstance() : SessionLog
+}
+SessionLog ..|> Subject
+
+class BoundaryStorage <<model>> {
+  -noGoZones : List<Polygon>
+  +addZone(zone : Polygon) : void
+  +removeZone(zone : Polygon) : void
+  +getZones() : List<Polygon>
+}
+BoundaryStorage ..|> Subject
+
+class MapHandler <<model>> {
+  -floorMap : MapData
+  +update(zones : List<Polygon>) : void
+  +highlightArea(area : Polygon) : void
+  +renderOverlay(zone : Polygon) : void
+}
+MapHandler ..|> Observer
+
+/'──────────────────────────────────────────────────────────
+  STRATEGY PATTERN
+──────────────────────────────────────────────────────────'/
+interface CleaningAction <<strategy>> {
+  +execute(session : CleaningSession) : void
+}
+
+class StandardCleaningAction <<strategy>> {
+  +execute(session : CleaningSession) : void
+}
+StandardCleaningAction ..|> CleaningAction
+
+class SpotCleaningAction <<strategy>> {
+  +execute(session : CleaningSession) : void
+}
+SpotCleaningAction ..|> CleaningAction
+
+class EdgeCleaningAction <<strategy>> {
+  +execute(session : CleaningSession) : void
+}
+EdgeCleaningAction ..|> CleaningAction
+
+CleaningSession "1" o-- "1" CleaningAction : «current»
+CleaningController "1" --> "1" CleaningAction : «selects»
+
+/'──────────────────────────────────────────────────────────
+  VIEW (UI)
+──────────────────────────────────────────────────────────'/
+class PreferenceView <<view>> {
+  +update(roomId : String, p : CleaningPreference) : void
+  +display(all : Map<String,CleaningPreference>) : void
+  +sendUserInput(room : String, p : CleaningPreference) : void
+}
+PreferenceView ..|> Observer
+
+class CleaningStatusView <<view>> {
+  +update(p : float) : void
+  +display() : void
+}
+CleaningStatusView ..|> Observer
+
+class NotificationManager <<view>> {
+  +update(p : float) : void
+  +display() : void
+  +showAlert(type : AlertType) : void
+}
+NotificationManager ..|> Observer
+
+class BoundaryEditor <<view>> {
+  +defineZone(points : List<Point>) : void
+  +sendZone(zone : Polygon) : void
+  +display() : void
+}
+
+class LogViewer <<view>> {
+  +update(newEntry : SessionEntry) : void
+  +show(all : List<SessionEntry>) : void
+}
+LogViewer ..|> Observer
+
+class UserInterface <<view>> {
+  +showMessage(msg : String) : void
+}
+
+/'──────────────────────────────────────────────────────────
+  CONTROLLERS
+──────────────────────────────────────────────────────────'/
+class CleaningController <<controller>> {
+  -session : CleaningSession
+  +selectAction(action : CleaningAction) : void
+  +updateProgress(percent : float) : void
+  +forwardPreference(room : String, p : CleaningPreference) : void
+  +notifyCompletion() : void
+  +sendLog(msg : String) : void
+}
+
+class PreferenceManager <<controller>> {
+  -storage : RoomPreferenceStorage
+  +savePreference(room : String, p : CleaningPreference) : void
+  +loadPreference(room : String) : CleaningPreference
+}
+
+class BoundaryValidator <<controller>> {
+  -storage : BoundaryStorage
+  +isValid(zone : Polygon) : boolean
+}
+
+class Logger <<controller>> {
+  -log : SessionLog
+  +log(event : String) : void
+}
+Logger --> SessionLog : «uses getInstance()»
+
+/'──────────────────────────────────────────────────────────
+  COMPOSITIONS & AGGREGATIONS
+──────────────────────────────────────────────────────────'/
+SessionLog "1" *-- "0..*" SessionEntry : «contains»
+BoundaryStorage "1" *-- "0..*" Polygon : «contains»
+RoomPreferenceStorage "1" o-- "0..*" CleaningPreference : «aggregates»
+
+/'──────────────────────────────────────────────────────────
+  MVC RELATIONSHIPS
+──────────────────────────────────────────────────────────'/
+CleaningController --> "*" MapHandler : «conveys»
+CleaningController --> "0..*" NotificationManager : «uses»
+CleaningController --> "0..*" CleaningStatusView : «updates»
+CleaningController --> "1" PreferenceManager : «requests»
+CleaningController --> "1" Logger : «delegates»
+CleaningController --> "0..1" CleaningSession : «manages»
+
+PreferenceManager --> "1" RoomPreferenceStorage : «persists»
+PreferenceView --> "1" PreferenceManager : «sends»
+
+BoundaryEditor --> "1" MapHandler : «renders»
+BoundaryEditor --> "*" BoundaryValidator : «submits»
+BoundaryValidator --> "1" BoundaryStorage : «stores»
+MapHandler --> "1" BoundaryStorage : «reads»
+
+LogViewer --> "1" SessionLog : «reads»
+
+CleaningStatusView <-- "1" CleaningController : «receives»
+NotificationManager --> "1" UserInterface : «displays»
+
+/'──────────────────────────────────────────────────────────
+  OBSERVER LINKS (use-cases)
+──────────────────────────────────────────────────────────'/
+CleaningStatusView ..> CleaningSession : registerObserver()
+NotificationManager ..> CleaningSession : registerObserver()
+CleaningSession --> CleaningStatusView : notifyObservers()
+CleaningSession --> NotificationManager : notifyObservers()
+
+PreferenceView ..> RoomPreferenceStorage : registerObserver()
+RoomPreferenceStorage --> PreferenceView : notifyObservers()
+
+MapHandler ..> BoundaryStorage : registerObserver()
+BoundaryStorage --> MapHandler : notifyObservers()
+
+LogViewer ..> SessionLog : registerObserver()
+SessionLog --> LogViewer : notifyObservers()
+@enduml

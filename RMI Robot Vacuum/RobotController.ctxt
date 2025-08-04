@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=RobotController
+comment1.params=
+comment1.target=RobotController()
+comment10.params=callback
+comment10.target=void\ unregisterCallback(NotificationInterface)
+comment2.params=
+comment2.target=void\ update()
+comment3.params=
+comment3.target=void\ notifyCallbacks()
+comment4.params=
+comment4.target=RobotStatus\ getStatus()
+comment5.params=
+comment5.target=int\ getCleaningProgress()
+comment6.params=
+comment6.target=int\ getBatteryLevel()
+comment7.params=
+comment7.target=boolean\ startCleaning()
+comment8.params=
+comment8.target=boolean\ stopCleaning()
+comment9.params=callback
+comment9.target=void\ registerCallback(NotificationInterface)
+numComments=11

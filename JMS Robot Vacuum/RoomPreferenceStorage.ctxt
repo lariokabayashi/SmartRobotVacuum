@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=RoomPreferenceStorage
+comment1.params=roomId
+comment1.target=CleaningPreference\ getPreference(java.lang.String)
+comment2.params=roomId\ pref
+comment2.target=void\ setPreference(java.lang.String,\ CleaningPreference)
+comment3.params=o
+comment3.target=void\ registerObserver(Observer)
+comment4.params=o
+comment4.target=void\ removeObserver(Observer)
+comment5.params=
+comment5.target=void\ notifyObservers()
+numComments=6

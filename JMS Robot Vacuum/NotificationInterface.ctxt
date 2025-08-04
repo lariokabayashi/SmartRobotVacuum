@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=NotificationInterface
+comment0.text=\n\ Defines\ the\ notification\ interface\ for\ server-to-client\ communication.\n\ Implemented\ by\ the\ RobotCaller\ (server)\ and\ handled\ by\ AppResponder\ (client).\n
+comment1.params=status
+comment1.target=void\ notifyStatusChange(serobjs.RobotStatus)
+comment2.params=batteryLevel
+comment2.target=void\ notifyLowBattery(int)
+comment3.params=
+comment3.target=void\ notifyCleaningComplete()
+comment4.params=
+comment4.target=void\ returnToDock()
+numComments=5

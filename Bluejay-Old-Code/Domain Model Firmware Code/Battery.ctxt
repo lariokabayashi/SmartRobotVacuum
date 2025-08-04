@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Battery
+comment0.text=\r\n\ Stores\ the\ charge\ of\ robot's\ battery\r\n\r\n\ @Brian\r\n\ @12/6\r\n
+comment1.params=
+comment1.target=Battery()
+comment2.params=
+comment2.target=Battery\ getInstance()
+comment3.params=
+comment3.target=boolean\ moved()
+comment4.params=
+comment4.target=void\ onCharger()
+numComments=5

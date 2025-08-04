@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Command
+comment0.text=\n\ Write\ a\ description\ of\ class\ Command\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Command()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Command\n
+comment2.params=a
+comment2.target=boolean\ isCommand(java.lang.String)
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
+comment3.params=
+comment3.target=void\ allOutput()
+numComments=4

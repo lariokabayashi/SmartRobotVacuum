@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=NotificationManager
+comment1.params=
+comment1.target=NotificationManager()
+comment10.params=
+comment10.target=void\ returnToDock()
+comment11.params=
+comment11.target=boolean\ close()
+comment2.params=
+comment2.target=void\ initializeConsumers()
+comment3.params=arg
+comment3.target=void\ update(java.lang.Object)
+comment4.params=message
+comment4.target=void\ handleStatusMessage(javax.jms.Message)
+comment5.params=message
+comment5.target=void\ handleAlertMessage(javax.jms.Message)
+comment6.params=message
+comment6.target=void\ showErrorAlert(java.lang.String)
+comment7.params=status
+comment7.target=void\ notifyStatusChange(serobjs.RobotStatus)
+comment8.params=batteryLevel
+comment8.target=void\ notifyLowBattery(int)
+comment9.params=
+comment9.target=void\ notifyCleaningComplete()
+numComments=12

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=BoundaryValidator
+comment0.text=\r\n\ CONTROLLER\ \u2013\ business\ rule\ checks\ for\ new\ polygons.\r\n
+comment1.params=s
+comment1.target=BoundaryValidator(BoundaryStorage)
+comment2.params=z
+comment2.target=boolean\ isValid(java.awt.Polygon)
+numComments=3

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=NotificationInterface
+comment1.params=status
+comment1.target=void\ notifyStatusChange(RobotStatus)
+comment2.params=
+comment2.target=void\ notifyLowBattery()
+comment3.params=
+comment3.target=void\ notifyCleaningComplete()
+comment4.params=
+comment4.target=void\ returnToDock()
+numComments=5

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=AppOutputToFirmware
+comment0.text=\r\n\ Data\ sent\ from\ the\ app\ to\ the\ robot\ firmware.\r\n\ Represents\ the\ user's\ decision\ or\ override\ action.\r\n
+comment1.params=customAction\ timestamp
+comment1.target=AppOutputToFirmware(java.lang.String,\ java.time.LocalDateTime)
+comment2.params=
+comment2.target=void\ display()
+numComments=3

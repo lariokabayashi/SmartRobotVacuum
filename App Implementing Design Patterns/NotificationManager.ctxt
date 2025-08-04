@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=NotificationManager
+comment1.params=arg
+comment1.target=void\ update(java.lang.Object)
+comment2.params=p
+comment2.target=void\ update(float)
+comment3.params=
+comment3.target=void\ display()
+comment4.params=t
+comment4.target=void\ showAlert(AlertType)
+comment5.params=
+comment5.target=void\ returnToDock()
+numComments=6

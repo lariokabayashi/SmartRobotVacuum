@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=SessionEntry
+comment0.text=\n\ Single\ line\ in\ the\ session\ log.\n\ Extend\ with\ timestamp,\ status,\ message,\ etc.\n
+comment1.params=
+comment1.target=SessionEntry()
+comment2.params=msg
+comment2.target=SessionEntry(java.lang.String)
+comment3.params=
+comment3.target=long\ getTimestamp()
+comment4.params=
+comment4.target=java.lang.String\ getMessage()
+comment5.params=m
+comment5.target=void\ setMessage(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

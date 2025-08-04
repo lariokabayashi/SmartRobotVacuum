@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=JMSClient
+comment0.text=\n\ Generic\ JMSClient\ for\ Openwire\ ActiveMQ.\n\n\ @author\ Wolfgang\ Renz\n\ @version\ May\ 2020,\ Dec.\ 2024\n
+comment1.params=host\ port\ user\ password\ dest
+comment1.target=JMSClient(java.lang.String,\ int,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ JMSClient\n
+comment2.params=
+comment2.target=void\ setTrustedPackages()
+comment3.params=destination
+comment3.target=JMSClient(java.lang.String)
+comment3.text=\n\ Default\ constructor\n
+comment4.params=
+comment4.target=boolean\ connect()
+comment5.params=
+comment5.target=boolean\ close()
+numComments=6

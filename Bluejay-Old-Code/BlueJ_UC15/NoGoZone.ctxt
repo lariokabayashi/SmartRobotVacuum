@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=NoGoZone
+comment1.params=xStart\ yStart\ xEnd\ yEnd\ label
+comment1.target=NoGoZone(int,\ int,\ int,\ int,\ java.lang.String)
+numComments=2

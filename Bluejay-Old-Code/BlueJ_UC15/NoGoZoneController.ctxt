@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=NoGoZoneController
+comment1.params=model
+comment1.target=NoGoZoneController(NoGoZoneModel)
+comment2.params=x1\ y1\ x2\ y2\ label
+comment2.target=void\ onZoneDrawn(int,\ int,\ int,\ int,\ java.lang.String)
+comment3.params=output\ view
+comment3.target=void\ onCleaningComplete(FirmwareOutput,\ NotificationView)
+numComments=4

@@ -1,0 +1,31 @@
+@startuml
+title Observer – Session Log Feed
+
+interface Subject {
+  +registerObserver(o : Observer)
+  +removeObserver(o : Observer)
+  +notifyObservers()
+}
+
+interface Observer {
+  +update(arg)
+}
+
+/'── Concrete Subject ──'/
+class SessionLog <<model>> {
+  -entries : List<SessionEntry>
+  +addEntry(e:SessionEntry) : void     'mutator
+  +getEntries() : List<SessionEntry>
+}
+SessionLog ..|> Subject
+
+/'── Concrete Observer ──'/
+class LogViewer <<view>> {
+  +update(newEntry : SessionEntry) : void
+  +show(all : List<SessionEntry>) : void
+}
+LogViewer ..|> Observer
+
+Observer ..> Subject : registerObserver()
+Subject  --> Observer : notifyObservers()
+@enduml

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=FirmwareOutput
+comment0.text=\n\ Simulated\ firmware\ output.\ Sends\ a\ map\ with\ values\:\n\ 0\ \=\ clean,\ 1\ \=\ mess,\ 2\ \=\ no-go\ zone.\n
+comment1.params=mapGrid\ cleaningComplete
+comment1.target=FirmwareOutput(int[][],\ boolean)
+comment2.params=
+comment2.target=int[][]\ getMapGrid()
+numComments=3

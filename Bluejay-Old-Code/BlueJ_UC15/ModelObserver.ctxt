@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=ModelObserver
+comment1.params=zones
+comment1.target=void\ modelUpdated(java.util.List)
+numComments=2

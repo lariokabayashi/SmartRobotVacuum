@@ -1,0 +1,24 @@
+@startuml
+title Singleton Pattern – SessionLog
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+class SessionLog <<model, singleton>> {
+  -entries : List<SessionEntry>
+  +addEntry(e : SessionEntry) : void
+  +getEntries() : List<SessionEntry>
+  --
+  {static} getInstance() : SessionLog
+}
+SessionLog ..|> Subject
+
+class Logger <<controller>> {
+  -log : SessionLog
+  +log(event : String) : void
+}
+
+Logger --> SessionLog : «uses getInstance()»
+SessionLog "1" *-- "0..*" SessionEntry : «contains»
+@enduml

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=UserResponseHandler
+comment0.text=\r\n\ Handles\ user\ responses\ to\ app\ notifications.\r\n
+comment1.params=response
+comment1.target=void\ handleResponse(java.lang.String)
+numComments=2

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=NotificationService
+comment1.params=
+comment1.target=void\ notifyReturnToDock()
+comment1.text=\n\ Notifies\ the\ app\ that\ the\ robot\ is\ returning\ to\ the\ dock\ (e.g.,\ due\ to\ low\ battery).\n
+comment2.params=progress
+comment2.target=void\ pushProgressUpdate(float)
+comment2.text=\n\ Pushes\ a\ cleaning\ progress\ update\ to\ the\ app.\n\ @param\ progress\ Current\ cleaning\ percentage\n
+numComments=3

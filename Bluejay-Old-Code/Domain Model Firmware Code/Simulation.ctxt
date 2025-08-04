@@ -1,0 +1,32 @@
+#BlueJ class context
+comment0.target=Simulation
+comment0.text=\r\n\ Simulation\ class\ to\ simulate\ a\ robot's\ sensor\ data\ and\ movement\ \r\n\ in\ a\ manually\ defined\ grid.\r\n\r\n\ @Brian\r\n\ @31/5\r\n
+comment1.params=
+comment1.target=Simulation()
+comment1.text=\r\n\ Private\ constructor\ sets\ up\ the\ simulation\ using\ a\ manually\ defined\ grid.\r\n\ The\ grid\ is\ defined\ via\ a\ string\ array\ for\ clear\ visual\ layout.\r\n\r\n
+comment10.params=
+comment10.target=void\ restartCleaning()
+comment2.params=
+comment2.target=Simulation\ getInstance()
+comment2.text=\r\n\ Returns\ the\ singleton\ instance\ of\ the\ Simulation\ class.\r\n\r\n\ @return\ the\ single\ Simulation\ instance.\r\n
+comment3.params=r\ c
+comment3.target=boolean\ inBounds(int,\ int)
+comment4.params=dRow\ dCol
+comment4.target=int\ scanDirection(int,\ int)
+comment4.text=\r\n\ Scans\ from\ the\ robot's\ current\ position\ in\ the\ given\ direction\r\n\ for\ up\ to\ 10\ cells.\ Returns\ the\ distance\ to\ the\ first\ encountered\r\n\ obstacle.\ If\ no\ obstacle\ is\ found\ or\ if\ the\ ray\ goes\ out\ of\ bounds,\r\n\ returns\ 0.\r\n\r\n\ @param\ dRow\ row\ increment\r\n\ @param\ dCol\ column\ increment\r\n\ @return\ the\ distance\ to\ the\ obstacle\ or\ 0\ if\ none\ is\ detected.\r\n
+comment5.params=
+comment5.target=int[]\ getSensorData()
+comment5.text=\r\n\ Returns\ sensor\ data\ for\ the\ 4\ cardinal\ directions\ from\ the\ robot's\ cell.\r\n\ The\ returned\ array\ is\ ordered\ as\ follows\:\r\n\ \ \ index\ 0\ \=\ North,\ index\ 1\ \=\ East,\ index\ 2\ \=\ South,\ index\ 3\ \=\ West.\r\n\r\n\ @return\ an\ int\ array\ containing\ 4\ sensor\ readings.\r\n
+comment6.params=
+comment6.target=void\ sendSensorData()
+comment6.text=\r\n\ Sends\ the\ current\ sensor\ data\ to\ the\ PathChecker.\r\n\ Since\ PathChecker\ expects\ 8\ sensor\ readings,\r\n\ the\ same\ value\ is\ sent\ twice\ for\ each\ direction\:\r\n\ \ \ -\ North\ ->\ positions\ 1\ and\ 2\r\n\ \ \ -\ South\ ->\ positions\ 3\ and\ 4\r\n\ \ \ -\ West\ \ ->\ positions\ 5\ and\ 6\r\n\ \ \ -\ East\ \ ->\ positions\ 7\ and\ 8\r\n
+comment7.params=
+comment7.target=void\ sendInitialData()
+comment7.text=\r\n\ Sends\ the\ initial\ sensor\ data\ from\ the\ simulation.\r\n\ This\ method\ can\ be\ called\ to\ give\ more\ sensor\ readings.\r\n
+comment8.params=movement
+comment8.target=void\ processMovement(MovementWord)
+comment8.text=\r\n\ Processes\ a\ movement\ command.\ The\ robot\ will\ attempt\ to\ move\ one\ cell\r\n\ in\ the\ specified\ direction.\ If\ the\ destination\r\n\ cell\ is\ within\ bounds\ and\ is\ free,\ the\ move\ is\ performed.\r\n\ After\ moving,\ the\ updated\ sensor\ data\ is\ sent\ out.\r\n\r\n\ @param\ movement\ The\ movement\ command,\ provided\ as\ a\ MovementWord\ object.\r\n
+comment9.params=movement
+comment9.target=void\ updateRobotPosition(MovementWord)
+comment9.text=\r\n\ Updates\ the\ robot's\ position\ on\ the\ grid\ based\ on\ the\ given\ movement\ direction.\r\n\ \r\n\ @param\ movement\ the\ movement\ command\r\n
+numComments=11

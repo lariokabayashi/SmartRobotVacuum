@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=AppMapManager
+comment0.text=\r\n\ Sends\ alerts\ to\ the\ end\ user\ via\ app.\r\n
+comment1.params=message
+comment1.target=void\ notifyUser(java.lang.String)
+numComments=2

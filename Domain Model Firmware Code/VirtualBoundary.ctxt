@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=VirtualBoundary
+comment0.text=\r\n\ Class\ VirtualBoundary\ stores\ a\ rectangular\ area\ on\ a\ grid\ and\ checks\ \r\n\ if\ a\ given\ point\ is\ within\ that\ rectangle.\r\n\ The\ rectangle\ is\ defined\ by\ two\ x-coordinates\ and\ two\ y-coordinates.\r\n\r\n\ @Brian\r\n\ @29/5\r\n
+comment1.params=x1\ x2\ y1\ y2
+comment1.target=VirtualBoundary(int,\ int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ for\ class\ VirtualBoundary.\r\n\ Initializes\ the\ rectangle\ using\ two\ x-values\ and\ two\ y-values.\r\n\ \r\n\ @param\ x1\ First\ x-coordinate\ \r\n\ @param\ x2\ Second\ x-coordinate\ \r\n\ @param\ y1\ First\ y-coordinate\r\n\ @param\ y2\ Second\ y-coordinate\r\n
+comment2.params=
+comment2.target=int\ getX1()
+comment2.text=\r\n\ Getter\ for\ first\ x\ value.\r\n
+comment3.params=
+comment3.target=int\ getX2()
+comment3.text=\r\n\ Getter\ for\ second\ x\ value.\r\n
+comment4.params=
+comment4.target=int\ getY1()
+comment4.text=\r\n\ Getter\ for\ first\ y\ value.\r\n
+comment5.params=
+comment5.target=int\ getY2()
+comment5.text=\r\n\ Getter\ for\ second\ y\ value.\r\n
+comment6.params=x\ y
+comment6.target=boolean\ isRestricted(int,\ int)
+comment6.text=\r\n\ Method\ to\ check\ if\ a\ specific\ point\ is\ within\ \r\n\ the\ restricted\ rectangular\ area.\r\n\r\n\ @param\ x\ The\ x-coordinate\ to\ check\r\n\ @param\ y\ The\ y-coordinate\ to\ check\r\n\ @return\ true\ if\ the\ point\ (x,\ y)\ is\ inside\ the\ rectangle,\ \r\n\ false\ otherwise\r\n
+comment7.params=
+comment7.target=void\ displayBoundary()
+comment7.text=\r\n\ Method\ to\ display\ the\ boundaries\ of\ the\ restricted\ area\r\n
+numComments=8

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=PathChecker
+comment0.text=\r\n\ PathChecker\ receives\ sensor\ data\ from\ SLAMModules,\ processes\ it\ and\ \r\n\ sends\ the\ compiled\ data\ to\ the\ Navigator\ for\ movement\ decisions.\r\n\r\n\ @author\ Brian\r\n\ @version\ 30/5\r\n
+comment1.params=
+comment1.target=PathChecker()
+comment1.text=\r\n\ Private\ constructor\ for\ singleton\r\n\ Initializes\ sensor\ modules\ and\ connects\ to\ the\ Navigator.\r\n\ \r\n
+comment2.params=
+comment2.target=PathChecker\ getInstance()
+comment2.text=\r\n\ Singleton\ accessor\ for\ PathChecker.\r\n
+comment3.params=position\ distance
+comment3.target=void\ updateData(int,\ int)
+comment3.text=\r\n\ Receives\ data\ from\ the\ Sensor\ Modules\ and\ uses\ the\ closer\ value\r\n\ to\ determine\ the\ distance\ from\ an\ obstacle.\r\n\ \r\n\ @param\ position\ identifies\ which\ sensor\ is\ sending\ the\ data\r\n\ @param\ distance\ the\ distance\ to\ the\ closest\ obstacle\ in\ that\ area\r\n
+comment4.params=
+comment4.target=void\ update()
+comment4.text=\r\n\ Notifies\ when\ cleaning\ is\ done\ and\ resets\ this\ class.\r\n
+numComments=5

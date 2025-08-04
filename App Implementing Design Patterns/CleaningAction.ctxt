@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.target=CleaningAction
+comment0.text=\r\n\ STRATEGY\ (Strategy\ pattern)\r\n\ ---------------------------------\r\n\ Represents\ a\ pluggable\ cleaning\ algorithm.\ \ Concrete\r\n\ implementations\ execute\ their\ own\ logic\ and\ manipulate\r\n\ the\ supplied\ {@link\ CleaningSession}.\r\n
+numComments=1

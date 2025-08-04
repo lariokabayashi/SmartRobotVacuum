@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=CleaningSession
+comment1.params=robotStatus
+comment1.target=void\ setRobotStatusInterface(RobotStatusInterface)
+comment2.params=progress
+comment2.target=void\ setProgress(float)
+comment3.params=a
+comment3.target=void\ setCurrentAction(CleaningAction)
+comment4.params=
+comment4.target=void\ executeAction()
+comment5.params=o
+comment5.target=void\ registerObserver(Observer)
+comment5.text=---------------\ Subject\ plumbing\ ---------------
+comment6.params=o
+comment6.target=void\ removeObserver(Observer)
+comment7.params=
+comment7.target=void\ notifyObservers()
+comment8.params=progress
+comment8.target=void\ notifyObservers(float)
+numComments=9

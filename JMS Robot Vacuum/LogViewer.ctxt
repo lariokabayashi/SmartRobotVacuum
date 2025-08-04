@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=LogViewer
+comment1.params=arg
+comment1.target=void\ update(java.lang.Object)
+comment2.params=entries
+comment2.target=void\ show(java.util.List)
+numComments=3

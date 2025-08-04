@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=NotificationHandler
+comment1.params=listener
+comment1.target=void\ addStatusListener(java.util.function.Consumer)
+comment2.params=listener
+comment2.target=void\ removeStatusListener(java.util.function.Consumer)
+comment3.params=listener
+comment3.target=void\ addErrorListener(java.util.function.Consumer)
+comment4.params=listener
+comment4.target=void\ removeErrorListener(java.util.function.Consumer)
+numComments=5

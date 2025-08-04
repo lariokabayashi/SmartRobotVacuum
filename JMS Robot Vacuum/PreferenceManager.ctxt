@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=PreferenceManager
+comment0.text=\n\ CONTROLLER\ \u2013\ thin\ wrapper\ around\ {@link\ RoomPreferenceStorage}.\n
+comment1.params=s
+comment1.target=PreferenceManager(RoomPreferenceStorage)
+comment2.params=room\ p
+comment2.target=void\ savePreference(java.lang.String,\ CleaningPreference)
+comment3.params=room
+comment3.target=CleaningPreference\ loadPreference(java.lang.String)
+numComments=4

@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=RobotStatusInterface
+comment0.text=\n\ Defines\ the\ robot\ command\ interface\ for\ client-to-server\ communication.\n\ Implemented\ by\ the\ MobileAppCaller\ (client)\ and\ handled\ by\ RobotResponder\ (server).\n
+comment1.params=
+comment1.target=serobjs.RobotStatus\ getCurrentStatus()
+comment1.text=\n\ Gets\ the\ complete\ current\ status\ of\ the\ robot\n\ @return\ RobotStatus\ object\ containing\ all\ status\ information\n\ @throws\ JMSException\ if\ communication\ fails\n
+comment2.params=
+comment2.target=boolean\ startCleaning()
+comment2.text=\n\ Starts\ the\ cleaning\ process\n\ @return\ true\ if\ command\ was\ accepted,\ false\ otherwise\n\ @throws\ JMSException\ if\ communication\ fails\n
+comment3.params=
+comment3.target=boolean\ stopCleaning()
+comment3.text=\n\ Stops\ the\ cleaning\ process\n\ @return\ true\ if\ command\ was\ accepted,\ false\ otherwise\n\ @throws\ JMSException\ if\ communication\ fails\n
+comment4.params=
+comment4.target=boolean\ returnToDock()
+comment4.text=\n\ Commands\ the\ robot\ to\ return\ to\ its\ docking\ station\n\ @return\ true\ if\ command\ was\ accepted,\ false\ otherwise\n\ @throws\ JMSException\ if\ communication\ fails\n
+comment5.params=
+comment5.target=void\ eot()
+comment5.text=\n\ \ eot\ sends\ an\ EndOfTransmission\ and\ quits\ the\ connection\n
+numComments=6

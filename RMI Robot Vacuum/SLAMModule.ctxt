@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=SLAMModule
+comment0.text=\n\ Abstract\ class\ representing\ the\ module\ for\ all\ sensor\ types\ of\ the\n\ SLAM\ obstacle\ detection\ system.\ It\ processes\ the\ sensor\ data\ and\n\ sends\ it\ to\ the\ PathChecker\ to\ be\ incorporated\ into\ one\ current\n\ real-time\ check\ of\ obstacles\ around\ the\ robot.\n\ \n\ \n\ @author\ Brian\n\ @version\ 14/05\n
+comment1.params=position
+comment1.target=SLAMModule(int)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ SLAMModule\n\ \n\ @param\ pc\ The\ PathChecker\ object\ to\ send\ distance\ data\ to.\n
+comment2.params=
+comment2.target=int\ getData()
+comment2.text=\n\ Retreives\ most\ recent\ distance\ to\ obstacle\ detected.\n\n\ @return\ distance\ the\ distance\ to\ an\ obstacle\n
+comment3.params=newD
+comment3.target=int\ updateDistance(int)
+comment3.text=\n\ When\ the\ most\ recent\ distance\ to\ obstacle\ is\ detected\ sends\ it\ to\n\ the\ PartChecker\ class\ for\ real-time\ data\n\n\ @param\ \ newD\ \ \ \ a\ new\ distance\ variable\ from\ sensors\n\ @return\ confirmation\n
+comment4.params=
+comment4.target=int\ getPos()
+comment4.text=\n\ A\ getter\ for\ position.\n
+numComments=5

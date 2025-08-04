@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=EndUser
+comment0.text=\r\n\ Represents\ the\ human\ user\ of\ the\ system.\r\n
+comment1.params=message
+comment1.target=void\ receiveNotification(java.lang.String)
+comment2.params=log
+comment2.target=void\ HandleLogs(java.lang.String)
+numComments=3

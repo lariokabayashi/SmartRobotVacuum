@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=BoundaryEditor
+comment1.params=points
+comment1.target=void\ defineZone(java.util.List)
+comment2.params=zone
+comment2.target=void\ sendZone(java.awt.Polygon)
+comment3.params=
+comment3.target=void\ display()
+numComments=4

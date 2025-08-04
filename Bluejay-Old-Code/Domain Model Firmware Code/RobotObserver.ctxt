@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=RobotObserver
+comment0.text=\r\n\ An\ interface\ to\ implement\ the\ observer\ pattern.\ Listens\ for\ when\ a\r\n\ clean\ is\ finished.\r\n\r\n\ @Brian\r\n\ @2/6\r\n
+comment1.params=
+comment1.target=void\ update()
+comment1.text=\r\n\ Method\ for\ the\ observers\r\n
+numComments=2

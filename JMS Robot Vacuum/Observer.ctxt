@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Observer
+comment0.text=\n\ OBSERVER\ (Observer\ pattern)\n\ ---------------------------------\n\ Any\ view/controller/helper\ that\ wants\ push-style\ updates\n\ from\ a\ {@link\ Subject}.\ \ The\ single\ update\ argument\ is\n\ intentionally\ generic\ (Object)\ so\ each\ Subject\ can\ pass\ the\n\ most\ convenient\ payload\:\ Float,\ Map,\ List,\ etc.\n
+comment1.params=arg
+comment1.target=void\ update(java.lang.Object)
+numComments=2

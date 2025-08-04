@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CleaningStatusView
+comment0.text=\n\ VIEW\ -\ Displays\ live\ robot\ status\ information\n
+comment1.params=controller\ status
+comment1.target=CleaningStatusView(CleaningController,\ serobjs.RobotStatus)
+comment2.params=arg
+comment2.target=void\ update(java.lang.Object)
+comment3.params=status
+comment3.target=void\ displayFullStatus(serobjs.RobotStatus)
+numComments=4

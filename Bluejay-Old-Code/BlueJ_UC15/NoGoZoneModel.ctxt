@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=NoGoZoneModel
+comment1.params=zone
+comment1.target=void\ addZone(NoGoZone)
+comment2.params=zone
+comment2.target=void\ removeZone(NoGoZone)
+comment3.params=
+comment3.target=java.util.List\ getZones()
+comment4.params=obs
+comment4.target=void\ addObserver(ModelObserver)
+comment5.params=
+comment5.target=void\ notifyObservers()
+numComments=6

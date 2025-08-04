@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Logger
+comment0.text=\r\n\ CONTROLLER\ \u2013\ lightweight\ fa\u00E7ade\ over\ the\ singleton\ {@link\ SessionLog}.\r\n
+comment1.params=event
+comment1.target=void\ log(java.lang.String)
+numComments=2

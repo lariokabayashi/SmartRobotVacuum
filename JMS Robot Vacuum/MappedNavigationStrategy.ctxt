@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=MappedNavigationStrategy
+comment0.text=\n\ Strategy\ using\ a\ stored\ map\ with\ support\ for\ virtual\ boundaries\ and\ dynamic\ redirection.\n
+comment1.params=inputMap
+comment1.target=MappedNavigationStrategy(Map)
+comment1.text=\n\ Constructor\ for\ this\ strategy\n\ \n\ @param\ inputMap\ the\ map\ for\ the\ strategy\ to\ utilise.\n
+comment2.params=data\ vb\ lastMove
+comment2.target=MovementWord\ calculateNextMove(SurroundingData,\ VirtualBoundary,\ MovementWord)
+comment2.text=\n\ Determines\ the\ next\ best\ movement\ for\ the\ robot\ using\ the\ map\ and\ bfs.\n\ \n\ @param\ data\ the\ data\ of\ surrounding\ obstacles\n\ @param\ vb\ rectangle\ set\ by\ user\ for\ the\ robot\ to\ avoid.\n\ @param\ lastMove\ the\ previous\ move\ done\ by\ the\ robot.\n
+comment3.params=startX\ startY\ data
+comment3.target=java.util.List\ bfsToNearestDirty(int,\ int,\ SurroundingData)
+comment3.text=\n\ The\ implementation\ of\ the\ bts\ to\ find\ the\ next\ best\ move.\ It\ priorities\ finding\n\ values\ of\ 4\ in\ the\ grid\ and\ avoiding\ places\ the\ robot\ should\ not\ access\ like\ 1\ and\ 3.\n\ It\ additionaly\ checks\ with\ SurroundingData\ to\ block\ off\ directions\ which\ are\ open\n\ on\ the\ map\ but\ aren't\ in\ the\ current\ scenario.\n\ \n\ @param\ startX\ the\ starting\ x\ coordinate\n\ @param\ startY\ the\ starting\ y\ coordinate\n\ @param\ data\ the\ compiled\ sensor\ data\ which\ shows\ how\ close\ obstacles\ are.\n\ \n\ @return\ a\ list\ of\ next\ optimal\ moves.\n
+comment4.params=startX\ startY\ targetX\ targetY
+comment4.target=java.util.List\ bfsToTarget(int,\ int,\ int,\ int)
+comment4.text=\n\ BFS\ search\ from\ the\ current\ position\ to\ a\ specified\ target\ position.\n\ \n\ @param\ startX\ starting\ x\ coordinate\n\ @param\ startY\ starting\ y\ coordinate\n\ @param\ targetX\ the\ x\ coordinate\ to\ reach\n\ @param\ targetY\ the\ y\ coordinate\ to\ reach\n\ \n\ @param\ the\ list\ of\ the\ next\ optimal\ moves\n
+numComments=5

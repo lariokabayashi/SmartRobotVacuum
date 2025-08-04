@@ -1,0 +1,32 @@
+@startuml
+title Observer – Room Preferences
+
+interface Subject {
+  +registerObserver(o : Observer)
+  +removeObserver(o : Observer)
+  +notifyObservers()
+}
+
+interface Observer {
+  +update(arg)
+}
+
+/'── Concrete Subject ──'/
+class RoomPreferenceStorage <<model>> {
+  -preferences : Map<String,CleaningPreference>
+  +setPreference(roomId:String, p:CleaningPreference) : void   'mutator
+  +getPreference(roomId:String) : CleaningPreference
+}
+RoomPreferenceStorage ..|> Subject
+
+/'── Concrete Observer ──'/
+class PreferenceView <<view>> {
+  +update(roomId:String, p:CleaningPreference) : void
+  +display(all : Map<String,CleaningPreference>) : void
+  +sendUserInput(room:String, p:CleaningPreference) : void
+}
+PreferenceView ..|> Observer
+
+Observer ..> Subject : registerObserver()
+Subject  --> Observer : notifyObservers()
+@enduml

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=MapData
+comment1.params=mapData\ timestamp
+comment1.target=MapData(byte[],\ java.util.Date)
+comment2.params=
+comment2.target=byte[]\ getMapBytes()
+comment3.params=
+comment3.target=java.util.Date\ getTimestamp()
+numComments=4
